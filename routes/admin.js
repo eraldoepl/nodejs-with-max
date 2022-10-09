@@ -5,7 +5,10 @@ const router = express.Router();
 const products = [];
 
 router.get("/add-product", (req, res, next) => {
-  res.render("add-product", { pageTitle: "Add Product" });
+  res.render("add-product.pug", {
+    pageTitle: "Add Product",
+    path: "/admin/add-product",
+  });
   // res.sendFile(path.join(__dirname, "..", "views", "add-product.html"));
 });
 
